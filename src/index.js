@@ -25,7 +25,7 @@ function findCountry() {
 
   fetchCountries(`${COUNTRIES_PATH}${searchTerm}${FILTERS}`).then(countries => {
     if (countries.length > 10) {
-      Notiflix.Notify.warning(
+      Notiflix.Notify.info(
         'Too many matches found. Please enter a more specific name.'
       );
       resultsDiv.innerHTML = '';
