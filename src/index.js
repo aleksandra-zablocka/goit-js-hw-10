@@ -21,6 +21,7 @@ function findCountry() {
   const searchTerm = searchBox.value.trim();
   if (searchTerm === '') {
     clearFields();
+    return;
   }
 
   fetchCountries(`${COUNTRIES_PATH}${searchTerm}${FILTERS}`).then(countries => {
